@@ -230,3 +230,27 @@ for key,values in numbers_fav.items():
     for value in values:
         print(f"\n{value}")
     print("---------------")
+
+# Ex. 6.11
+cities = {
+    'Moscow'  : {
+        'country'    : "Russia",
+        'population' : 10_000_000,
+        'fact'       : "Kremlin",
+    },
+    'Belgrad' : {
+        'country'    : "Serbia",
+        'population' : 5_000_000,
+        'fact'       : "War",
+    },
+    'Madrid'  : {
+        'country'    : "Spain",
+        'population' : 7_000_000,
+        'fact'       : "Real Madrid",
+    },
+}
+for k,v in cities.items():
+    print (f"This is {k} : ")
+    for k1,v1 in v.items():
+        print(f"{k1}: {v1}")
+    print("-------------")

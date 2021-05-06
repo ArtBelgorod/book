@@ -94,68 +94,94 @@ os.system('cls')
 # Chapter 6
 # Словари часть 1
 man = {
-       'first_name' : 'Artem',
-       'last_name'  : 'Khaimov',
-       'age'        : 42,
-       'city'       : 'Belgorod',
+    'first_name': 'Artem',
+    'last_name': 'Khaimov',
+    'age': 42,
+    'city': 'Belgorod',
 }
 print(man['first_name'])
 print(man['last_name'])
 print(man['age'])
 print(man['city'])
-print ("---------------")
+print("---------------")
 numbers_fav = {
-    'Art'   : 5,
-    'Bob'   : 7,
-    "Rob"   : 15,
-    "Dan"   : 26,
-    "Fedor" : 92,
+    'Art': 5,
+    'Bob': 7,
+    "Rob": 15,
+    "Dan": 26,
+    "Fedor": 92,
 }
-for f_name, f_num  in numbers_fav.items() :
+for f_name, f_num in numbers_fav.items():
     print(f"{f_name}'s favourite num is {f_num}!")
 
-print ("---------------")
+print("---------------")
 dict_slova = {
-    'tupes'   : "Кортежи",
-    'dicts'   : "Словари",
-    "lists"   : "Списки",
-    "sets"    : "Множества",
-    "for"     : "Циклы",
+    'tupes': "Кортежи",
+    'dicts': "Словари",
+    "lists": "Списки",
+    "sets": "Множества",
+    "for": "Циклы",
 }
-for f_opred, f_slovo  in dict_slova.items() :
+for f_opred, f_slovo in dict_slova.items():
     print(f"{f_opred} - это   {f_slovo}!\n")
 
 # Словари часть 2
 
-print ("---------------")
+print("---------------")
 dict_rivers = {
-    'Нил'   : "Египет",
-    'Волга'   : "Россия",
-    "Амазонка"   : "Южная Америка",
-    "Ганг"    : "Индия",
-    "Хуанхэ"     : "Китай",
+    'Нил': "Египет",
+    'Волга': "Россия",
+    "Амазонка": "Южная Америка",
+    "Ганг": "Индия",
+    "Хуанхэ": "Китай",
 }
 print("Реки:")
-for f_opred in dict_rivers :
+for f_opred in dict_rivers:
     print(f"{f_opred}!\n")
 print("Страны:\n")
-for f_opred in sorted(dict_rivers.values(), reverse = True)  :
-    print(f"{f_opred}!", end = " ")
+for f_opred in sorted(dict_rivers.values(), reverse=True):
+    print(f"{f_opred}!", end=" ")
 
 print("-------------------------")
 favourite_languages = {
-    'jen' : "C",
-    "ben" : "Python",
-    "den" : "Ruby",
-    "tim" : "Pascal"
+    'jen': "C",
+    "ben": "Python",
+    "den": "Ruby",
+    "tim": "Pascal"
 }
-peoples = ['tim','den','art', 'rob']
+peoples = ['tim', 'den', 'art', 'rob']
 Flag = False
-for human in peoples :
-    for name in favourite_languages :
+for human in peoples:
+    for name in favourite_languages:
         if human.lower() == name.lower():
-            print (f"{human.title()}, thank you for time!")
+            print(f"{human.title()}, thank you for time!")
             Flag = True
-    if not Flag :
+    if not Flag:
         print(f"{human.title()}, tell poll, please!")
     Flag = False
+
+os.system('cls')
+# Chapter last
+man1 = {
+    'first_name': 'Artem',
+    'last_name': 'Khaimov',
+    'age': 42,
+    'city': 'Belgorod',
+}
+man2 = {
+    'first_name': 'Andrew',
+    'last_name': 'Baranov',
+    'age': 35,
+    'city': 'Belgorod',
+}
+man3 = {
+    'first_name': 'Dima',
+    'last_name': 'Tarasov',
+    'age': 23,
+    'city': 'Moscow',
+}
+people = [man1, man2, man3]
+for chel in people:
+    for key,value in chel.items():
+        print (f"{key} - {value}, ", end = "")
+    print ("\n")

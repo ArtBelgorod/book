@@ -208,11 +208,25 @@ for pet in pets:
 # Ex. 6.9
 favourite_places = {
     'Square': ["Bob", "Ben", "Dan"],
-    'Big Ben': ["Art","Bob"],
+    'Big Ben': ["Art", "Bob"],
     'Luvr': ["Tanya", "Tima", "Dan"],
 }
 for place, names in favourite_places.items():
-    print (f"{place} favourite for:")
+    print(f"{place} favourite for:")
     for name in names:
         print(f"\n{name}")
-    print ("\n")
+    print("\n")
+
+# Ex. 6.10
+numbers_fav = {
+    'Art': [5, 7, 10],
+    'Bob': [7, 15, 888],
+    "Rob": [15, 36, 89],
+    "Dan": [26, 74, 98],
+    "Fedor": [92, 129]
+}
+for key,values in numbers_fav.items():
+    print (f"Favourite's num for {key}:")
+    for value in values:
+        print(f"\n{value}")
+    print("---------------")

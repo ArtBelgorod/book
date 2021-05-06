@@ -182,6 +182,37 @@ man3 = {
 }
 people = [man1, man2, man3]
 for chel in people:
-    for key,value in chel.items():
-        print (f"{key} - {value}, ", end = "")
+    for key, value in chel.items():
+        print(f"{key} - {value}, ", end="")
+    print("\n")
+
+# Ex 6.8
+Vaska = {
+    'animal': "cat",
+    'owner': "Art",
+}
+Muska = {
+    'animal': "rat",
+    'owner': "Bob",
+}
+Puska = {
+    'animal': "dog",
+    'owner': "Dan",
+}
+pets = [Vaska, Muska, Puska]
+for pet in pets:
+    for key, value in pet.items():
+        print(f"{key} - {value}, ", end="")
+    print("\n")
+
+# Ex. 6.9
+favourite_places = {
+    'Square': ["Bob", "Ben", "Dan"],
+    'Big Ben': ["Art","Bob"],
+    'Luvr': ["Tanya", "Tima", "Dan"],
+}
+for place, names in favourite_places.items():
+    print (f"{place} favourite for:")
+    for name in names:
+        print(f"\n{name}")
     print ("\n")

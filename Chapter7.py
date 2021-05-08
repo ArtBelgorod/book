@@ -59,3 +59,54 @@ print (toppings)
 # Ex 7.7
 while True:
     print("1")
+
+Ex 7.8
+sandwich_orders = ['super_san1', 'super_san2', 'super_san3']
+print(sandwich_orders)
+finished_sandwiches = []
+while sandwich_orders:
+    current_sandwich = sandwich_orders.pop()
+    print (f"I made your {current_sandwich} sandwich!")
+    finished_sandwiches.append(current_sandwich)
+
+for sandwich in finished_sandwiches :
+    print (f"Finished sandwiches: {sandwich}!")
+print(sandwich_orders)
+finished_sandwiches.reverse()
+print(finished_sandwiches)
+
+Ex 7.9
+sandwich_orders = ['pastrami','super_san1', 'pastrami','super_san2', 'pastrami','super_san3','pastrami']
+print(sandwich_orders)
+finished_sandwiches = []
+print ("We have no pastrami!")
+while sandwich_orders:
+    current_sandwich = sandwich_orders.pop()
+    if current_sandwich != 'pastrami':
+        finished_sandwiches.append(current_sandwich)
+
+print(sandwich_orders)
+finished_sandwiches.reverse()
+print(finished_sandwiches)
+
+# Ex 7.10
+otpusk_dict = {}
+active = True
+while active:
+    name = input("Input your name - ")
+    otpusk = input("Where you want to rest - ")
+    otpusk_dict[name] = otpusk
+    repeat = input("Another man? ('y/n') ")
+    while True:
+        if repeat == "n":
+            active = False
+            break
+        elif repeat == "y" :
+            break
+        else:
+            repeat = input("Another man? ('y/n') ")
+print ("\n Poll Requests\n_______________")
+for name, otpusk in otpusk_dict.items():
+    print(f"{name.title()} want to rest in {otpusk.title()}!")
+
+

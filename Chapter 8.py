@@ -59,7 +59,23 @@ while active:
         elif repeat == "д":
             break
         else:
-            print("Вводим правильно (д или н) ")
+            repeat = input ("Введём ещё? (д/н) ")
     print(f"Словарь - {make_album(user_album, user_artist)}")
 
+#Ex 8.9 - 8.11
+def show_messages(messages):
+    for message in messages:
+        print(message)
 
+def send_messages(messages):
+    sent_messages = []
+    while messages:
+        current_message = messages.pop()
+        print(current_message)
+        sent_messages.append(current_message)
+    sent_messages.reverse()
+    return sent_messages
+
+my_messages = ["Hello!","Boys and Girls!","Good game!"]
+print(send_messages(my_messages[:]))
+print(my_messages)

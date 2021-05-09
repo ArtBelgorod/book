@@ -79,3 +79,36 @@ def send_messages(messages):
 my_messages = ["Hello!","Boys and Girls!","Good game!"]
 print(send_messages(my_messages[:]))
 print(my_messages)
+
+# Ex 8.12 - 8.14
+def print_sandwiches(*toppings):
+    print("---------------------")
+    print("\nНачинки:")
+    for topping in toppings:
+        print(f"- {topping}")
+
+def build_profile (first,last,**user_info):
+    """Строит словарь с информацией о пользователе"""
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+def make_car (name,model,**car_info):
+    """Строит словарь с информацией о машине"""
+    car_info['car_name'] = name
+    car_info['car_model'] = model
+    return car_info
+
+print_sandwiches('peeperoni','mushrooms','coconut')
+print_sandwiches('peeperoni','coconut')
+print_sandwiches('coconut')
+
+user_profile = build_profile('artem','khaimov',
+                             location = 'belgorod',
+                             profession = 'sysadmin',
+                             work = 'Bstu')
+
+print(user_profile)
+
+car = make_car('subaru', 'outback',color = 'blue', volume = 250)
+print (car)

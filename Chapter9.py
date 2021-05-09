@@ -18,6 +18,8 @@ class Restaurant():
         self.number_served += inc_num_served
 
 
+
+
 restaurant = Restaurant("Прага","Ресторан русской кухни")
 restaurant.describe_restaurant()
 restaurant.open_restaurant()
@@ -81,3 +83,34 @@ user2.greet_user()
 
 user3.describe_user()
 user3.greet_user()
+
+# Ex 9.6 - 9.8
+class IceCreamStand(Restaurant):
+    def __init__(self,name,type):
+        super().__init__(name,type)
+        self.flavor = ['coconut','raspberry','strawberry']
+    def ice_cream_print(self):
+        print(f"Сорта мороженого - {self.flavor}.")
+
+my_ice_cream = IceCreamStand("Метро - Рижская","Киоск мороженого")
+my_ice_cream.ice_cream_print()
+
+
+class Privileges():
+    def __init__(self, privileges=['разрешено добавлять сообщения', 'разрешено удалять пользователей',
+                                   'разрешено банить пользователей', ]):
+        self.privileges = privileges
+
+    def show_privileges(self):
+        for priv in self.privileges:
+            print(f" - {priv}")
+
+class Admin(User):
+    def __init__(self,first_name,last_name,e_mail,location):
+        super().__init__(first_name, last_name, e_mail, location)
+        self.privileges = Privileges()
+
+my_admin = Admin('Art','Khaimov','admin@admin.com','Belgorod')
+print(f"Админу {my_admin.f_name} {my_admin.l_name}:")
+my_admin.privileges.show_privileges()
+

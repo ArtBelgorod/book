@@ -17,9 +17,6 @@ class Restaurant():
     def increment_number_served(self, inc_num_served):
         self.number_served += inc_num_served
 
-
-
-
 restaurant = Restaurant("Прага","Ресторан русской кухни")
 restaurant.describe_restaurant()
 restaurant.open_restaurant()

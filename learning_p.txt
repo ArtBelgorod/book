@@ -1,0 +1,4 @@
+I like Python. In it you may work with numbers.
+I like Python. In it you may work with files.
+I like Python. In it you may work with objects.
+I like Python. In it you may work with modules.
